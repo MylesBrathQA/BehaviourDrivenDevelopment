@@ -18,7 +18,7 @@ import cucumber.api.java.en.When;
 
 public class PassionateTeaTest {
 	private static WebDriver driver;
-	private String URL = "thedemosite.co.uk/";
+	private String URL = "http://www.practiceselenium.com/welcome.html";
 	private static Actions action;
 
 	@Before
@@ -26,7 +26,7 @@ public class PassionateTeaTest {
 		System.setProperty("webdriver.gecko.driver",
 				"src/test/resources/drivers/geckodriver-v0.26.0-win64/geckodriver.exe");
 		FirefoxOptions fOptions = new FirefoxOptions();
-		fOptions.setHeadless(false);
+		fOptions.setHeadless(true);
 		driver = new FirefoxDriver(fOptions);
 		fOptions.addPreference("profile.default_content_setting_values.cookies", 2);
 		fOptions.addPreference("network.cookie.cookieBehavior", 2);
